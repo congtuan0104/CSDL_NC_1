@@ -245,5 +245,129 @@ namespace DoAn01
             btnLuu.Enabled = false;
             txtMaKH.Enabled = false;
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if (tblKH.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtMaKH.Text == "")
+            {
+                MessageBox.Show("Chọn khách hàng cần sửa thông tin trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtTenKH.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập tên khách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenKH.Focus();
+                return;
+            }
+            if (txtSoNha.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Chưa nhập số nhà", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtSoNha.Focus();
+                return;
+            }
+            if (txtDuong.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Chưa nhập tên đường", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDuong.Focus();
+                return;
+            }
+            if (txtPhuong.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Chưa nhập phường", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtPhuong.Focus();
+                return;
+            }
+            if (txtQuan.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Chưa nhập quận", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtQuan.Focus();
+                return;
+            }
+            if (txtThanhPho.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Chưa nhập thành phố", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtThanhPho.Focus();
+                return;
+            }
+            if (mtbDienThoai.Text == "   -    -")
+            {
+                MessageBox.Show("Chưa nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtbDienThoai.Focus();
+                return;
+            }
+
+            if (dateTimePickerNgSinh.Value == DateTime.Now)
+            {
+                MessageBox.Show("Chưa nhập ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dateTimePickerNgSinh.Focus();
+                return;
+            }
+
+           
+            //Chèn thêm
+            string fullname = txtTenKH.Text.Trim();
+            string firstname = fullname.Substring(0, fullname.IndexOf(" "));
+            string lastname = fullname.Substring(fullname.IndexOf(" ") + 1);
+            string phoneNumber = Regex.Replace(mtbDienThoai.Text, @"[^0-9]", string.Empty);
+
+            sql = "UPDATE KHACHHANG SET "
+                + "HO=N'" + firstname + "',"
+                + "TEN=N'" + lastname + "',"
+                + "NGSINH='" + dateTimePickerNgSinh.Value.ToString("yyyy-MM-dd") + "',"
+                + "SONHA=" + txtSoNha.Text + ","
+                + "DUONG=N'" + txtDuong.Text.Trim() + "',"
+                + "PHUONG=N'" + txtPhuong.Text.Trim() + "',"
+                + "QUAN=N'" + txtQuan.Text.Trim() + "',"
+                + "THANHPHO=N'" + txtThanhPho.Text.Trim() + "',"
+                + "DIENTHOAI='" + phoneNumber
+                + "' WHERE MAKH=N'" + txtMaKH.Text + "';";
+
+            System.Diagnostics.Debug.WriteLine(sql);
+            //sql = "UPDATE KHACHHANG VALUES ("
+            //    + "N'" + txtMaKH.Text.Trim()
+            //    + "',N'" + firstname
+            //    + "',N'" + lastname
+            //    + "','" + dateTimePickerNgSinh.Value.ToString("yyyy-MM-dd")
+            //    + "','" + txtSoNha.Text.Trim()
+            //    + "',N'" + txtDuong.Text.Trim()
+            //    + "',N'" + txtPhuong.Text.Trim()
+            //    + "',N'" + txtQuan.Text.Trim()
+            //    + "',N'" + txtThanhPho.Text.Trim()
+            //    + "','" + phoneNumber
+            //    + "')";
+            Functions.RunSQL(sql);
+            LoadDataGridView();
+            ResetValues();
+            btnBoQua.Enabled = false;
+
+
+
+
+            //if (txtDiaChi.Text.Trim().Length == 0)
+            //{
+            //    MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtDiaChi.Focus();
+            //    return;
+            //}
+            //if (mtbDienThoai.Text == "(  )    -")
+            //{
+            //    MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    mtbDienThoai.Focus();
+            //    return;
+            //}
+            //sql = "UPDATE tblKhach SET TenKhach=N'" + txtTenKhach.Text.Trim().ToString() + "',DiaChi=N'" +
+            //    txtDiaChi.Text.Trim().ToString() + "',DienThoai='" + mtbDienThoai.Text.ToString() +
+            //    "' WHERE MaKhach=N'" + txtMaKhach.Text + "'";
+            //Functions.RunSQL(sql);
+            //LoadDataGridView();
+            //ResetValues();
+            //btnBoQua.Enabled = false;
+        }
     }
 }
