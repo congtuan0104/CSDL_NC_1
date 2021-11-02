@@ -50,5 +50,51 @@ namespace DoAn01.Class
             DataAdapter.Fill(table);
             return table;
         }
+
+        public static bool CheckValue(string sql)
+        {
+            SqlDataAdapter dap = new SqlDataAdapter(sql, Con);
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            if (table.Rows.Count > 0)
+                return true;
+            else return false;
+        }
+
+        public static void RunSQL(string sql)
+        {
+            SqlCommand cmd; 
+            cmd = new SqlCommand();
+            cmd.Connection = Con; 
+            cmd.CommandText = sql; 
+            try
+            {
+                cmd.ExecuteNonQuery(); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            cmd.Dispose();
+            cmd = null;
+        }
+
+        public static void RunSqlDel(string sql)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Functions.Con;
+            cmd.CommandText = sql;
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show(ex.ToString());
+            }
+            cmd.Dispose();
+            cmd = null;
+        }
     }
 }
