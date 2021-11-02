@@ -1,5 +1,5 @@
-# ĐỒ ÁN 1 - NHÓM 1 - CSDL Nâng cao - HCMUS
-
+# ĐỒ ÁN 1 - CSDL Nâng cao - HCMUS
+Lập trình giao diện quản lý bán hàng kết nối SQL server
 
 ## Thông tin chung
 * Mã số đồ án: 2021_CSDLNC_DA#1
