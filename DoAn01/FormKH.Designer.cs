@@ -71,89 +71,99 @@ namespace DoAn01
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(939, 153);
+            this.panel1.Size = new System.Drawing.Size(1127, 191);
             this.panel1.TabIndex = 0;
             // 
             // dateTimePickerNgSinh
             // 
+            this.dateTimePickerNgSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgSinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerNgSinh.Location = new System.Drawing.Point(168, 116);
+            this.dateTimePickerNgSinh.Location = new System.Drawing.Point(201, 146);
             this.dateTimePickerNgSinh.Name = "dateTimePickerNgSinh";
-            this.dateTimePickerNgSinh.Size = new System.Drawing.Size(183, 22);
+            this.dateTimePickerNgSinh.Size = new System.Drawing.Size(221, 27);
             this.dateTimePickerNgSinh.TabIndex = 2;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(667, 40);
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(804, 56);
             this.maskedTextBox1.Mask = "9999-000-000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(206, 22);
+            this.maskedTextBox1.Size = new System.Drawing.Size(229, 27);
             this.maskedTextBox1.TabIndex = 3;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(667, 75);
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(804, 104);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(207, 58);
+            this.textBox4.Size = new System.Drawing.Size(229, 69);
             this.textBox4.TabIndex = 4;
             // 
             // txtTenKH
             // 
-            this.txtTenKH.Location = new System.Drawing.Point(168, 75);
+            this.txtTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKH.Location = new System.Drawing.Point(200, 102);
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(183, 22);
+            this.txtTenKH.Size = new System.Drawing.Size(222, 27);
             this.txtTenKH.TabIndex = 1;
             // 
             // txtMaKH
             // 
-            this.txtMaKH.Location = new System.Drawing.Point(168, 40);
+            this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKH.Location = new System.Drawing.Point(200, 59);
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(183, 22);
+            this.txtMaKH.Size = new System.Drawing.Size(222, 27);
             this.txtMaKH.TabIndex = 0;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(589, 78);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(715, 109);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 17);
+            this.label6.Size = new System.Drawing.Size(61, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Địa chỉ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(589, 40);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(692, 59);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 17);
+            this.label5.Size = new System.Drawing.Size(84, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Điện thoại";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 116);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(36, 148);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.Size = new System.Drawing.Size(83, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ngày sinh";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 78);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 17);
+            this.label3.Size = new System.Drawing.Size(149, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Họ tên khách hàng";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 40);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 17);
+            this.label2.Size = new System.Drawing.Size(122, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã khách hàng";
             // 
@@ -162,7 +172,7 @@ namespace DoAn01
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(357, 9);
+            this.label1.Location = new System.Drawing.Point(458, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 32);
             this.label1.TabIndex = 0;
@@ -172,11 +182,11 @@ namespace DoAn01
             // 
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvKhachHang.Location = new System.Drawing.Point(0, 153);
+            this.dgvKhachHang.Location = new System.Drawing.Point(0, 191);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowTemplate.Height = 24;
-            this.dgvKhachHang.Size = new System.Drawing.Size(939, 433);
+            this.dgvKhachHang.Size = new System.Drawing.Size(1127, 535);
             this.dgvKhachHang.TabIndex = 1;
             // 
             // panel2
@@ -188,9 +198,9 @@ namespace DoAn01
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 510);
+            this.panel2.Location = new System.Drawing.Point(0, 650);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(939, 76);
+            this.panel2.Size = new System.Drawing.Size(1127, 76);
             this.panel2.TabIndex = 2;
             // 
             // btnDong
@@ -198,7 +208,7 @@ namespace DoAn01
             this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
             this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDong.Location = new System.Drawing.Point(797, 13);
+            this.btnDong.Location = new System.Drawing.Point(910, 13);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(123, 51);
             this.btnDong.TabIndex = 5;
@@ -210,7 +220,7 @@ namespace DoAn01
             // btnBoQua
             // 
             this.btnBoQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBoQua.Location = new System.Drawing.Point(643, 12);
+            this.btnBoQua.Location = new System.Drawing.Point(744, 12);
             this.btnBoQua.Name = "btnBoQua";
             this.btnBoQua.Size = new System.Drawing.Size(123, 51);
             this.btnBoQua.TabIndex = 4;
@@ -222,7 +232,7 @@ namespace DoAn01
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(489, 12);
+            this.btnLuu.Location = new System.Drawing.Point(578, 12);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(123, 51);
             this.btnLuu.TabIndex = 3;
@@ -235,7 +245,7 @@ namespace DoAn01
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(335, 13);
+            this.btnSua.Location = new System.Drawing.Point(412, 13);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(123, 51);
             this.btnSua.TabIndex = 2;
@@ -248,7 +258,7 @@ namespace DoAn01
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(181, 13);
+            this.btnXoa.Location = new System.Drawing.Point(246, 13);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(123, 51);
             this.btnXoa.TabIndex = 1;
@@ -261,7 +271,7 @@ namespace DoAn01
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(27, 12);
+            this.btnThem.Location = new System.Drawing.Point(80, 12);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(123, 51);
             this.btnThem.TabIndex = 0;
@@ -273,7 +283,7 @@ namespace DoAn01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 586);
+            this.ClientSize = new System.Drawing.Size(1127, 726);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.panel1);

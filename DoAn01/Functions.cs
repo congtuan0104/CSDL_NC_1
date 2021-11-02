@@ -23,7 +23,7 @@ namespace DoAn01.Class
             Con.Open();                  //Mở kết nối
             //Kiểm tra kết nối
             if (Con.State == ConnectionState.Open)
-                MessageBox.Show("Kết nối thành công");
+                MessageBox.Show("Kết nối dữ liệu thành công");
             else MessageBox.Show("Không thể kết nối với dữ liệu");
 
         }
