@@ -203,6 +203,7 @@ namespace DoAn01
             this.btnDong.Size = new System.Drawing.Size(123, 51);
             this.btnDong.TabIndex = 5;
             this.btnDong.Text = "&Đóng";
+            this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDong.UseVisualStyleBackColor = true;
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
@@ -226,6 +227,7 @@ namespace DoAn01
             this.btnLuu.Size = new System.Drawing.Size(123, 51);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "&Lưu";
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // btnSua
@@ -238,6 +240,7 @@ namespace DoAn01
             this.btnSua.Size = new System.Drawing.Size(123, 51);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "&Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = true;
             // 
             // btnXoa
@@ -250,6 +253,7 @@ namespace DoAn01
             this.btnXoa.Size = new System.Drawing.Size(123, 51);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "&Xoá";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
             // btnThem
@@ -262,6 +266,7 @@ namespace DoAn01
             this.btnThem.Size = new System.Drawing.Size(123, 51);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "&Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
             // 
             // FormKH

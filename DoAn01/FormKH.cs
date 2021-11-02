@@ -37,17 +37,17 @@ namespace DoAn01
         private void LoadDataGridView()
         {
             string sql;
-            sql = "SELECT MAKH,TEN,NGSINH,DIENTHOAI FROM KHACHHANG";
+            sql = "SELECT MAKH,HO+' '+TEN,NGSINH,DIENTHOAI FROM KHACHHANG";
             tblKH = Class.Functions.GetDataToTable(sql); //Đọc dữ liệu từ bảng
             dgvKhachHang.DataSource = tblKH; //Nguồn dữ liệu            
             dgvKhachHang.Columns[0].HeaderText = "Mã khách hàng";
-            dgvKhachHang.Columns[1].HeaderText = "Tên khách hàng";
+            dgvKhachHang.Columns[1].HeaderText = "Họ tên khách hàng";         
             dgvKhachHang.Columns[2].HeaderText = "Ngày sinh";
             dgvKhachHang.Columns[3].HeaderText = "Điện thoại";
-            dgvKhachHang.Columns[0].Width = 100;
-            dgvKhachHang.Columns[1].Width = 300;
-            dgvKhachHang.Columns[2].Width = 100;
-            dgvKhachHang.Columns[3].Width = 100;
+            dgvKhachHang.Columns[0].Width = 60;
+            dgvKhachHang.Columns[1].Width = 100;
+            dgvKhachHang.Columns[2].Width = 70;
+            dgvKhachHang.Columns[3].Width = 70;
             dgvKhachHang.AllowUserToAddRows = false; //Không cho người dùng thêm dữ liệu trực tiếp
             dgvKhachHang.EditMode = DataGridViewEditMode.EditProgrammatically; //Không cho sửa dữ liệu trực tiếp
         }
