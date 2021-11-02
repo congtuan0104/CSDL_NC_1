@@ -1,5 +1,6 @@
 # ĐỒ ÁN 1 - CSDL Nâng cao - HCMUS
-Lập trình giao diện quản lý bán hàng kết nối SQL server
+Lập trình giao diện quản lý bán hàng kết nối SQL server<br>
+Cấu hình server đặt trong file App.config
 
 ## Thông tin chung
 * Mã số đồ án: 2021_CSDLNC_DA#1
