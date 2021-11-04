@@ -104,6 +104,7 @@ namespace DoAn01
             txtPhuong.Text = "";
             txtQuan.Text = "";
             txtThanhPho.Text = "";
+            dateTimePickerNgSinh.Value = DateTime.Today;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -170,7 +171,7 @@ namespace DoAn01
                 return;
             }
 
-            if (dateTimePickerNgSinh.Value == DateTime.Now)
+            if (dateTimePickerNgSinh.Value == DateTime.Today)
             {
                 MessageBox.Show("Chưa nhập ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dateTimePickerNgSinh.Focus();
@@ -331,45 +332,10 @@ namespace DoAn01
                 + "' WHERE MAKH=N'" + txtMaKH.Text + "';";
 
             System.Diagnostics.Debug.WriteLine(sql);
-            //sql = "UPDATE KHACHHANG VALUES ("
-            //    + "N'" + txtMaKH.Text.Trim()
-            //    + "',N'" + firstname
-            //    + "',N'" + lastname
-            //    + "','" + dateTimePickerNgSinh.Value.ToString("yyyy-MM-dd")
-            //    + "','" + txtSoNha.Text.Trim()
-            //    + "',N'" + txtDuong.Text.Trim()
-            //    + "',N'" + txtPhuong.Text.Trim()
-            //    + "',N'" + txtQuan.Text.Trim()
-            //    + "',N'" + txtThanhPho.Text.Trim()
-            //    + "','" + phoneNumber
-            //    + "')";
             Functions.RunSQL(sql);
             LoadDataGridView();
             ResetValues();
             btnBoQua.Enabled = false;
-
-
-
-
-            //if (txtDiaChi.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtDiaChi.Focus();
-            //    return;
-            //}
-            //if (mtbDienThoai.Text == "(  )    -")
-            //{
-            //    MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    mtbDienThoai.Focus();
-            //    return;
-            //}
-            //sql = "UPDATE tblKhach SET TenKhach=N'" + txtTenKhach.Text.Trim().ToString() + "',DiaChi=N'" +
-            //    txtDiaChi.Text.Trim().ToString() + "',DienThoai='" + mtbDienThoai.Text.ToString() +
-            //    "' WHERE MaKhach=N'" + txtMaKhach.Text + "'";
-            //Functions.RunSQL(sql);
-            //LoadDataGridView();
-            //ResetValues();
-            //btnBoQua.Enabled = false;
         }
     }
 }
