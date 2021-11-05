@@ -43,12 +43,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.dgvTKHoaDon = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -218,28 +215,9 @@
             this.label1.Location = new System.Drawing.Point(284, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 26);
+            this.label1.Size = new System.Drawing.Size(250, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "TÌM KIẾM HÓA ĐƠN";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 354);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 34);
-            this.panel3.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(41, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(235, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Nhấn đúp vào để xem thông tin chi tiết hóa đơn";
+            this.label1.Text = "TÌM KIẾM THÔNG TIN";
             // 
             // dgvTKHoaDon
             // 
@@ -250,7 +228,7 @@
             this.dgvTKHoaDon.Name = "dgvTKHoaDon";
             this.dgvTKHoaDon.RowHeadersWidth = 51;
             this.dgvTKHoaDon.RowTemplate.Height = 24;
-            this.dgvTKHoaDon.Size = new System.Drawing.Size(800, 223);
+            this.dgvTKHoaDon.Size = new System.Drawing.Size(800, 257);
             this.dgvTKHoaDon.TabIndex = 6;
             // 
             // FormTimKiemHoaDon
@@ -259,7 +237,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvTKHoaDon);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "FormTimKiemHoaDon";
@@ -268,8 +245,6 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKHoaDon)).EndInit();
             this.ResumeLayout(false);
 
@@ -287,8 +262,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvTKHoaDon;
         private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.Label label7;

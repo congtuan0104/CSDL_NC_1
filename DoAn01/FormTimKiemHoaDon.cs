@@ -73,13 +73,11 @@ namespace DoAn01
                 MessageBox.Show("Nhập vào mã khách hàng hoặc tên khách hàng!!!", "Yêu cầu ...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = "SELECT HD.MAHD,HD.MAKH,KH.TEN,HD.NGAYLAP,HD.TONGTIEN FROM HOADON HD,KHACHHANG KH WHERE 1=1";
+            sql = "SELECT *FROM KHACHHANG WHERE 1=1";
             if (txtMaKhach.Text != "")
-                sql = sql + " AND HD.MAKH Like N'%" + txtMaKhach.Text + "%'";
+                sql = sql + " AND MAKH Like N'%" + txtMaKhach.Text + "%'";
             if (txtTenKH.Text != "")
-                sql = sql + " AND HD.MAKH=KH.MAKH AND KH.TEN Like N'%" + txtTenKH.Text + "%'";
-            if((txtTenKH.Text!="")&&(txtMaKhach.Text!=""))
-                sql = sql + " AND HD.MAKH=KH.MAKH AND KH.TEN Like N'%" + txtTenKH.Text + "%'"+ " AND HD.MAKH Like N'%" + txtMaKhach.Text + "%'";
+                sql = sql + " AND TEN Like N'%" + txtTenKH.Text + "%'";
             if (tblHDB.Rows.Count == 0)
             {
                 MessageBox.Show("Không có bản ghi thỏa mãn điều kiện!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
