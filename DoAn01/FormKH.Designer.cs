@@ -433,7 +433,7 @@ namespace DoAn01
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormKH";
-            this.Text = "Khách hàng";
+            this.Text = "KHÁCH HÀNG";
             this.Load += new System.EventHandler(this.FormKH_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
