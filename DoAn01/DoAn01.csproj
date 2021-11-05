@@ -74,6 +74,9 @@
     <EmbeddedResource Include="FormSP.resx">
       <DependentUpon>FormSP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
