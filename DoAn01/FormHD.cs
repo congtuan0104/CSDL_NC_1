@@ -232,7 +232,7 @@ namespace DoAn01
         {
 
         }
-
+        private string MAKH_old;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (btnThem.Enabled == false)
@@ -246,7 +246,7 @@ namespace DoAn01
                 MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
+            MAKH_old = dgvHoaDon.CurrentRow.Cells["MAHD"].Value.ToString();
             txtMAHD.Text = dgvHoaDon.CurrentRow.Cells["MAHD"].Value.ToString();
             txtMAKH.Text = dgvHoaDon.CurrentRow.Cells["MAKH"].Value.ToString();
             txtTongTien.Text = dgvHoaDon.CurrentRow.Cells["TONGTIEN"].Value.ToString();

@@ -15,6 +15,7 @@ namespace DoAn01
     public partial class FormHoaDon_Chitiet : Form
     {
         DataTable table_CTHD;
+        string temp_MASP;
 
        
         public FormHoaDon_Chitiet()
@@ -37,15 +38,20 @@ namespace DoAn01
 
         private void loadDataGidView_CTDH()
         {
-            string sql1 = "SELECT MAHD, MASP, SOLUONG, GIABAN, GIAGIAM, THANHTIEN FROM CT_HD WHERE MAHD='"+mahd+"'";
+            string sql1 = "SELECT CT.MASP, TENSP, SOLUONG, GIABAN, GIAGIAM, THANHTIEN " +
+                "FROM CT_HD CT,SANPHAM SP " +
+                "WHERE CT.MASP=SP.MASP AND" +
+                " MAHD='"+mahd+"'";
             table_CTHD = Class.Functions.GetDataToTable(sql1);
             dataGridview_CTHD.DataSource = table_CTHD;
-            dataGridview_CTHD.Columns[0].HeaderText = "MÃ HÓA ĐƠN";
-            dataGridview_CTHD.Columns[1].HeaderText = "MÃ SẢN PHẨM";
+            dataGridview_CTHD.Columns[0].HeaderText = "MÃ SẢN PHẨM";
+            dataGridview_CTHD.Columns[0].Visible = false;
+            dataGridview_CTHD.Columns[1].HeaderText = "TÊN SẢN PHẨM";
             dataGridview_CTHD.Columns[2].HeaderText = "SỐ LƯỢNG";
             dataGridview_CTHD.Columns[3].HeaderText = "GIÁ BÁN";
             dataGridview_CTHD.Columns[4].HeaderText = "GIÁ GIẢM";
             dataGridview_CTHD.Columns[5].HeaderText = "THÀNH TIỀN";
+
             dataGridview_CTHD.Columns[0].Width = 125;
             dataGridview_CTHD.Columns[1].Width = 125;
             dataGridview_CTHD.Columns[2].Width = 125;
@@ -57,8 +63,10 @@ namespace DoAn01
         }
 
 
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             if (btnThem.Enabled == false)
             {
                 MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -70,13 +78,13 @@ namespace DoAn01
                 MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            textBox_CT_MAHD.Text = dataGridview_CTHD.CurrentRow.Cells["MAHD"].Value.ToString();
+
             textBox_CT_MASP.Text = dataGridview_CTHD.CurrentRow.Cells["MASP"].Value.ToString();
             textBox_CT_SOLUONG.Text = dataGridview_CTHD.CurrentRow.Cells["SOLUONG"].Value.ToString();
             textBox_CT_GIABAN.Text = dataGridview_CTHD.CurrentRow.Cells["GIABAN"].Value.ToString();
             textBox_CT_GIAGIAM.Text = dataGridview_CTHD.CurrentRow.Cells["GIAGIAM"].Value.ToString();
             textBox_CT_THANHTIEN.Text = dataGridview_CTHD.CurrentRow.Cells["THANHTIEN"].Value.ToString();
-            
+            temp_MASP = textBox_CT_MASP.Text.Trim();
 
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
@@ -212,7 +220,7 @@ namespace DoAn01
                 return;
             };
 
-            string temp_MASP = textBox_CT_MASP.Text.Trim();
+            
 
             if (textBox_CT_MASP.Text.Trim().Length == 0)
             {
@@ -231,10 +239,8 @@ namespace DoAn01
 
             sql = "UPDATE CT_HD SET "
                 + "MASP = N'" + textBox_CT_MASP.Text.Trim() + "', "
-                + "SOLUONG = " + textBox_CT_SOLUONG.Text + ", "
-                + "GIABAN = " + textBox_CT_GIABAN.Text + ", "
-                + "GIAGIAM = " + textBox_CT_GIAGIAM.Text + " "
-                + "WHERE MAHD = N'" + textBox_CT_MAHD.Text.Trim() + "' AND MASP = N'" + temp_MASP + "';";
+                + "SOLUONG = " + textBox_CT_SOLUONG.Text + " "
+                + "WHERE MAHD = '" + textBox_CT_MAHD.Text.Trim() + "' AND MASP = '" + temp_MASP + "';";
 
             System.Diagnostics.Debug.WriteLine(sql);
             Functions.RunSQL(sql);
