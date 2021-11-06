@@ -16,7 +16,8 @@ namespace DoAn01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTimKiemHoaDon());
+            Application.Run(new FormMain());
+
         }
     }
 }
