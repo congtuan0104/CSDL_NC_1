@@ -341,5 +341,11 @@ namespace DoAn01
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormTimKiemHoaDon dglTimKiem = new FormTimKiemHoaDon();
+            dglTimKiem.ShowDialog();
+        }
     }
 }

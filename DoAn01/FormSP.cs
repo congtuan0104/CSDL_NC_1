@@ -242,5 +242,11 @@ namespace DoAn01
             ResetValues();
             btnBoQua.Enabled = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormTimKiemHoaDon dglTimKiem = new FormTimKiemHoaDon();
+            dglTimKiem.ShowDialog();
+        }
     }
 }

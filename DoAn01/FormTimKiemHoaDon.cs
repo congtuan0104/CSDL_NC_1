@@ -22,7 +22,6 @@ namespace DoAn01
 
         private void FormTimKiemHoaDon_Load(object sender, EventArgs e)
         {
-            Functions.Connect();
             LoadDataGridView();
         }
         private void LoadDataGridView()
