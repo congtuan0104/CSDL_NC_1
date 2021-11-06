@@ -16,16 +16,34 @@ namespace DoAn01.Class
 
         public static void Connect()
         {
-           
-            Con = new SqlConnection();   //Khởi tạo đối tượng
-            //Con.ConnectionString = @"Data Source = CONGTUAN\CONGTUAN; Initial Catalog = DoAn01_N1; Integrated Security = True";
+            string str1Con = @"Data Source=DESKTOP-U15BBSJ\SQLEXPRESS;Initial Catalog=DoAn01_N1;Integrated Security=True";
+            Con = new SqlConnection(str1Con);
+            //  Khởi tạo đối tượng
+            Con.ConnectionString = @"Data Source = CONGTUAN\CONGTUAN; Initial Catalog = DoAn01_N1; Integrated Security = True";
+            Con.ConnectionString = @"Data Source=DESKTOP-F3EC84V\SQLEXPRESS;Initial Catalog=DoAn01_N1;Integrated Security=True";
             Con.ConnectionString = DoAn01.Properties.Settings.Default.QLBHConnection;
             Con.Open();                  //Mở kết nối
             //Kiểm tra kết nối
             if (Con.State == ConnectionState.Open)
                 MessageBox.Show("Kết nối dữ liệu thành công");
             else MessageBox.Show("Không thể kết nối với dữ liệu");
+            /*  try
+              {
+                  if (Con == null)
+                  {
+                      Con = new SqlConnection(str1Con);
+                  }
 
+                  if (Con.State == ConnectionState.Closed)
+                  {
+                      Con.Open();
+                      MessageBox.Show("Kết nối dữ liệu thành công");
+                  }
+              }
+              catch (Exception ex)
+              {
+                  MessageBox.Show(ex.Message);
+              }*/
         }
         public static void Disconnect()
         {

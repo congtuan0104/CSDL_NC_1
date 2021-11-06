@@ -336,5 +336,10 @@ namespace DoAn01
             ResetValues();
             btnBoQua.Enabled = false;
         }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
