@@ -24,7 +24,6 @@ namespace DoAn01
 
         private void FormSP_Load(object sender, EventArgs e)
         {
-            Class.Functions.Connect();
             txtMaSP.Enabled = false;
             btnLuu.Enabled = false;
             btnBoQua.Enabled = false;

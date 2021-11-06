@@ -23,7 +23,6 @@ namespace DoAn01
 
         private void FormKH_Load(object sender, EventArgs e)
         {
-            Class.Functions.Connect();
             txtMaKH.Enabled = false;
             btnLuu.Enabled = false;
             btnBoQua.Enabled = false;
