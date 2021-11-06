@@ -36,8 +36,8 @@ namespace DoAn01
 
         private void btnHD_Click(object sender, EventArgs e)
         {
-            //FormHD dlgHD = new FormHD();
-            //dlgHD.ShowDialog();
+            FormHD dlgHD = new FormHD();
+            dlgHD.ShowDialog();
         }
 
         private void btnTK_Click(object sender, EventArgs e)
@@ -60,8 +60,8 @@ namespace DoAn01
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            //FormHD dlgHD = new FormHD();
-            //dlgHD.ShowDialog();
+            FormHD dlgHD = new FormHD();
+            dlgHD.ShowDialog();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

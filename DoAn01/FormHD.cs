@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using COMExcel = Microsoft.Office.Interop.Excel;
+
 using DoAn01.Class;
 
 namespace DoAn01
@@ -23,7 +23,6 @@ namespace DoAn01
 
         private void FormHD_Load(object sender, EventArgs e)
         {
-            Class.Functions.Connect();
             btnThem.Enabled = true;
             btnLuu.Enabled = false;
             btnXoa.Enabled = false;
