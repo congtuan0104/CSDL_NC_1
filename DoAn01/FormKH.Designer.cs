@@ -100,6 +100,7 @@ namespace DoAn01
             this.panel1.Size = new System.Drawing.Size(1139, 191);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+
             // 
             // label13
             // 

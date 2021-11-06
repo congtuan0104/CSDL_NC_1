@@ -48,6 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="FormHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHD.Designer.cs">
+      <DependentUpon>FormHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,8 +96,13 @@
     <Compile Include="Functions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <EmbeddedResource Include="FormHD.resx">
+      <DependentUpon>FormHD.cs</DependentUpon>
+
     <EmbeddedResource Include="FormChart.resx">
       <DependentUpon>FormChart.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="FormKH.resx">
       <DependentUpon>FormKH.cs</DependentUpon>
@@ -139,10 +151,12 @@
     <None Include="assets\icon\add-1-icon~1.png" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Resources\Find.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Female.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

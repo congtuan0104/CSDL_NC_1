@@ -347,5 +347,10 @@ namespace DoAn01
             FormTimKiemHoaDon dglTimKiem = new FormTimKiemHoaDon();
             dglTimKiem.ShowDialog();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
