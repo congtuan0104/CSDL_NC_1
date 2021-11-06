@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="FormTimKiemHoaDon.Designer.cs">
       <DependentUpon>FormTimKiemHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +98,7 @@
 
     <EmbeddedResource Include="FormTimKiemHoaDon.resx">
       <DependentUpon>FormTimKiemHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
