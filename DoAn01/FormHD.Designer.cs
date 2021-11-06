@@ -192,7 +192,7 @@ namespace DoAn01
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.RowTemplate.Height = 24;
-            this.dgvHoaDon.Size = new System.Drawing.Size(1155, 387);
+            this.dgvHoaDon.Size = new System.Drawing.Size(1139, 387);
             this.dgvHoaDon.TabIndex = 1;
             this.dgvHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

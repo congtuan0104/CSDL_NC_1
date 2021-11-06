@@ -47,7 +47,7 @@ namespace DoAn01
             dgvHoaDon.Columns[0].Width = 200;
             dgvHoaDon.Columns[1].Width = 200;
             dgvHoaDon.Columns[2].Width = 200;
-            dgvHoaDon.Columns[3].Width = 2000;
+            dgvHoaDon.Columns[3].Width = 200;
             dgvHoaDon.AllowUserToAddRows = false;
             dgvHoaDon.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
@@ -66,6 +66,7 @@ namespace DoAn01
             btnThem.Enabled = false;
             ResetValues();
             txtMAKH.Enabled = true;
+            txtMAHD.Enabled = true;
             txtMAKH.Focus();
         }
 
