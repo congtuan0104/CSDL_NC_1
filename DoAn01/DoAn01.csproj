@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormHoaDon_Chitiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoaDon_Chitiet.Designer.cs">
+      <DependentUpon>FormHoaDon_Chitiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +62,9 @@
     <Compile Include="Functions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormHoaDon_Chitiet.resx">
+      <DependentUpon>FormHoaDon_Chitiet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKH.resx">
       <DependentUpon>FormKH.cs</DependentUpon>
     </EmbeddedResource>
