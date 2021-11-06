@@ -24,9 +24,13 @@ namespace DoAn01
 
         private void FormHoaDon_Chitiet_Load(object sender, EventArgs e)
         {
-            Class.Functions.Connect();
             loadDataGidView_CTDH();
-            //Class.Functions.Disconnect();
+            btnLuu.Enabled = false;
+            btnThem.Enabled = true;
+            btnLuu.Enabled = false;
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
+            btnBoQua.Enabled = false;
         }
 
 
@@ -50,21 +54,9 @@ namespace DoAn01
         }
 
 
-
-
-
-
-
-
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if (btnThem.Enabled == false)
-            //{
-            //    MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtMaKH.Focus();
-            //    return;
-            //}
+  
             if (table_CTHD.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -76,18 +68,7 @@ namespace DoAn01
             textBox_CT_GIABAN.Text = dataGridview_CTHD.CurrentRow.Cells["GIABAN"].Value.ToString();
             textBox_CT_GIAGIAM.Text = dataGridview_CTHD.CurrentRow.Cells["GIAGIAM"].Value.ToString();
             textBox_CT_THANHTIEN.Text = dataGridview_CTHD.CurrentRow.Cells["THANHTIEN"].Value.ToString();
-            //txtTenKH.Text = dgvKhachHang.CurrentRow.Cells["HO"].Value.ToString() + " " + dgvKhachHang.CurrentRow.Cells["TEN"].Value.ToString();
-            //mtbDienThoai.Text = dgvKhachHang.CurrentRow.Cells["DIENTHOAI"].Value.ToString();
-            //if (dgvKhachHang.CurrentRow.Cells["NGSINH"].Value.ToString() != "")
-            //{
-            //    dateTimePickerNgSinh.Value = Convert.ToDateTime(dgvKhachHang.CurrentRow.Cells["NGSINH"].Value.ToString());
-            //}
-
-            //txtSoNha.Text = dgvKhachHang.CurrentRow.Cells["SONHA"].Value.ToString();
-            //txtDuong.Text = dgvKhachHang.CurrentRow.Cells["DUONG"].Value.ToString();
-            //txtPhuong.Text = dgvKhachHang.CurrentRow.Cells["PHUONG"].Value.ToString();
-            //txtQuan.Text = dgvKhachHang.CurrentRow.Cells["QUAN"].Value.ToString();
-            //txtThanhPho.Text = dgvKhachHang.CurrentRow.Cells["THANHPHO"].Value.ToString();
+            
 
             btnSua.Enabled = true;
             btnXoa.Enabled = true;

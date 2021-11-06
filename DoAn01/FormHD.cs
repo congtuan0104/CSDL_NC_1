@@ -96,6 +96,14 @@ namespace DoAn01
                 return;
             }
 
+            sql = "SELECT MAKH FROM KHACHHANG WHERE MAKH= N'" + txtMAKH.Text.Trim() + "'";
+            if (!Functions.CheckValue(sql))
+            {
+                MessageBox.Show("Mã khách hàng này không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMAHD.Focus();
+                return;
+            }
+
             sql = "INSERT HOADON(MAHD,MAKH,NGAYLAP) VALUES ("
                     + "N'" + txtMAHD.Text.Trim()
                     + "',N'" + txtMAKH.Text.Trim()
@@ -258,5 +266,10 @@ namespace DoAn01
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormHoaDon_Chitiet dlgChiTiet = new FormHoaDon_Chitiet();
+            dlgChiTiet.ShowDialog();
+        }
     }
 }

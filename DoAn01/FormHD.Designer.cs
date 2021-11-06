@@ -50,6 +50,7 @@ namespace DoAn01
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.panel2.SuspendLayout();
@@ -201,7 +202,7 @@ namespace DoAn01
             this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
             this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDong.Location = new System.Drawing.Point(910, 13);
+            this.btnDong.Location = new System.Drawing.Point(1004, 13);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(123, 51);
             this.btnDong.TabIndex = 5;
@@ -215,7 +216,7 @@ namespace DoAn01
             this.btnBoQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBoQua.Image = ((System.Drawing.Image)(resources.GetObject("btnBoQua.Image")));
             this.btnBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBoQua.Location = new System.Drawing.Point(744, 12);
+            this.btnBoQua.Location = new System.Drawing.Point(855, 13);
             this.btnBoQua.Name = "btnBoQua";
             this.btnBoQua.Size = new System.Drawing.Size(123, 51);
             this.btnBoQua.TabIndex = 4;
@@ -229,7 +230,7 @@ namespace DoAn01
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(578, 12);
+            this.btnLuu.Location = new System.Drawing.Point(685, 13);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(123, 51);
             this.btnLuu.TabIndex = 3;
@@ -243,7 +244,7 @@ namespace DoAn01
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(412, 13);
+            this.btnSua.Location = new System.Drawing.Point(507, 13);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(123, 51);
             this.btnSua.TabIndex = 2;
@@ -257,7 +258,7 @@ namespace DoAn01
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(246, 13);
+            this.btnXoa.Location = new System.Drawing.Point(337, 13);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(123, 51);
             this.btnXoa.TabIndex = 1;
@@ -271,7 +272,7 @@ namespace DoAn01
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(80, 12);
+            this.btnThem.Location = new System.Drawing.Point(12, 13);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(123, 51);
             this.btnThem.TabIndex = 0;
@@ -282,6 +283,7 @@ namespace DoAn01
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnDong);
             this.panel2.Controls.Add(this.btnBoQua);
             this.panel2.Controls.Add(this.btnLuu);
@@ -293,6 +295,20 @@ namespace DoAn01
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1139, 126);
             this.panel2.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(174, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 51);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "&Xem chi tiết";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormHD
             // 
@@ -337,5 +353,6 @@ namespace DoAn01
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
     }
 }
