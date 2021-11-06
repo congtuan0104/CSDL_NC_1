@@ -56,6 +56,7 @@ namespace DoAn01
             this.label1 = new System.Windows.Forms.Label();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnBoQua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -94,15 +95,18 @@ namespace DoAn01
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1139, 191);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(838, 148);
+            this.label13.Location = new System.Drawing.Point(837, 148);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(19, 29);
             this.label13.TabIndex = 17;
@@ -122,7 +126,7 @@ namespace DoAn01
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(417, 147);
+            this.label11.Location = new System.Drawing.Point(417, 146);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(19, 29);
             this.label11.TabIndex = 15;
@@ -142,14 +146,16 @@ namespace DoAn01
             // 
             this.txtThanhPho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThanhPho.Location = new System.Drawing.Point(957, 151);
+            this.txtThanhPho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtThanhPho.Name = "txtThanhPho";
-            this.txtThanhPho.Size = new System.Drawing.Size(170, 27);
+            this.txtThanhPho.Size = new System.Drawing.Size(169, 27);
             this.txtThanhPho.TabIndex = 13;
             // 
             // txtQuan
             // 
             this.txtQuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuan.Location = new System.Drawing.Point(731, 151);
+            this.txtQuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuan.Name = "txtQuan";
             this.txtQuan.Size = new System.Drawing.Size(107, 27);
             this.txtQuan.TabIndex = 12;
@@ -178,6 +184,7 @@ namespace DoAn01
             // 
             this.txtPhuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhuong.Location = new System.Drawing.Point(509, 150);
+            this.txtPhuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhuong.Name = "txtPhuong";
             this.txtPhuong.Size = new System.Drawing.Size(135, 27);
             this.txtPhuong.TabIndex = 9;
@@ -195,7 +202,8 @@ namespace DoAn01
             // txtDuong
             // 
             this.txtDuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuong.Location = new System.Drawing.Point(250, 149);
+            this.txtDuong.Location = new System.Drawing.Point(251, 149);
+            this.txtDuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDuong.Name = "txtDuong";
             this.txtDuong.Size = new System.Drawing.Size(161, 27);
             this.txtDuong.TabIndex = 7;
@@ -215,6 +223,7 @@ namespace DoAn01
             this.dateTimePickerNgSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgSinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerNgSinh.Location = new System.Drawing.Point(804, 102);
+            this.dateTimePickerNgSinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerNgSinh.Name = "dateTimePickerNgSinh";
             this.dateTimePickerNgSinh.Size = new System.Drawing.Size(229, 27);
             this.dateTimePickerNgSinh.TabIndex = 2;
@@ -222,7 +231,8 @@ namespace DoAn01
             // mtbDienThoai
             // 
             this.mtbDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbDienThoai.Location = new System.Drawing.Point(804, 56);
+            this.mtbDienThoai.Location = new System.Drawing.Point(804, 57);
+            this.mtbDienThoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbDienThoai.Mask = "999-0000-000";
             this.mtbDienThoai.Name = "mtbDienThoai";
             this.mtbDienThoai.Size = new System.Drawing.Size(229, 27);
@@ -232,6 +242,7 @@ namespace DoAn01
             // 
             this.txtSoNha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoNha.Location = new System.Drawing.Point(105, 148);
+            this.txtSoNha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoNha.Name = "txtSoNha";
             this.txtSoNha.Size = new System.Drawing.Size(55, 27);
             this.txtSoNha.TabIndex = 4;
@@ -240,16 +251,18 @@ namespace DoAn01
             // 
             this.txtTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.Location = new System.Drawing.Point(204, 102);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(222, 27);
+            this.txtTenKH.Size = new System.Drawing.Size(223, 27);
             this.txtTenKH.TabIndex = 1;
             // 
             // txtMaKH
             // 
             this.txtMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKH.Location = new System.Drawing.Point(204, 59);
+            this.txtMaKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(222, 27);
+            this.txtMaKH.Size = new System.Drawing.Size(223, 27);
             this.txtMaKH.TabIndex = 0;
             // 
             // labelSN
@@ -307,7 +320,7 @@ namespace DoAn01
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(458, 9);
+            this.label1.Location = new System.Drawing.Point(459, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 32);
             this.label1.TabIndex = 0;
@@ -318,6 +331,7 @@ namespace DoAn01
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKhachHang.Location = new System.Drawing.Point(0, 191);
+            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowTemplate.Height = 24;
@@ -327,6 +341,7 @@ namespace DoAn01
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnDong);
             this.panel2.Controls.Add(this.btnBoQua);
             this.panel2.Controls.Add(this.btnLuu);
@@ -335,18 +350,35 @@ namespace DoAn01
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 650);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1139, 76);
             this.panel2.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(842, 17);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 50);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "&Tìm kiếm";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDong
             // 
             this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
             this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDong.Location = new System.Drawing.Point(910, 13);
+            this.btnDong.Location = new System.Drawing.Point(1004, 15);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(123, 51);
+            this.btnDong.Size = new System.Drawing.Size(123, 50);
             this.btnDong.TabIndex = 5;
             this.btnDong.Text = "&Đóng";
             this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -358,9 +390,10 @@ namespace DoAn01
             this.btnBoQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBoQua.Image = ((System.Drawing.Image)(resources.GetObject("btnBoQua.Image")));
             this.btnBoQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBoQua.Location = new System.Drawing.Point(744, 12);
+            this.btnBoQua.Location = new System.Drawing.Point(676, 15);
+            this.btnBoQua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBoQua.Name = "btnBoQua";
-            this.btnBoQua.Size = new System.Drawing.Size(123, 51);
+            this.btnBoQua.Size = new System.Drawing.Size(123, 50);
             this.btnBoQua.TabIndex = 4;
             this.btnBoQua.Text = "&Huỷ bỏ";
             this.btnBoQua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -372,9 +405,10 @@ namespace DoAn01
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(578, 12);
+            this.btnLuu.Location = new System.Drawing.Point(511, 15);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(123, 51);
+            this.btnLuu.Size = new System.Drawing.Size(123, 50);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "&Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -386,9 +420,10 @@ namespace DoAn01
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(412, 13);
+            this.btnSua.Location = new System.Drawing.Point(344, 17);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(123, 51);
+            this.btnSua.Size = new System.Drawing.Size(123, 50);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "&Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -400,9 +435,10 @@ namespace DoAn01
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(246, 13);
+            this.btnXoa.Location = new System.Drawing.Point(176, 17);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(123, 51);
+            this.btnXoa.Size = new System.Drawing.Size(123, 50);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "&Xoá";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -414,9 +450,10 @@ namespace DoAn01
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(80, 12);
+            this.btnThem.Location = new System.Drawing.Point(12, 15);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(123, 51);
+            this.btnThem.Size = new System.Drawing.Size(123, 50);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "&Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -432,8 +469,9 @@ namespace DoAn01
             this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormKH";
-            this.Text = "Khách hàng";
+            this.Text = "KHÁCH HÀNG";
             this.Load += new System.EventHandler(this.FormKH_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -477,5 +515,6 @@ namespace DoAn01
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
     }
 }
