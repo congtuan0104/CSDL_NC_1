@@ -25,9 +25,8 @@ namespace DoAn01
         {
             btnThem.Enabled = true;
             btnLuu.Enabled = false;
-            btnXoa.Enabled = false;
+            btnBoQua.Enabled = false;
             txtMAHD.Enabled = false;
-            txtMAKH.Enabled = false;
             txtTongTien.Enabled = false;
             txtTongTien.Text = "0";
             LoadDataGridView();
@@ -63,26 +62,27 @@ namespace DoAn01
             btnBoQua.Enabled = true;
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
+            btnXemChiTiet.Enabled = false;
+            btnLuu.Text = "Thêm CTHD";
             ResetValues();
             txtMAKH.Enabled = true;
             txtMAHD.Enabled = true;
-            txtMAKH.Focus();
+            txtMAHD.Focus();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string sql;
-
-            if (txtMAKH.Text.Trim().Length == 0)
+            if (txtMAHD.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Chưa nhập mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Chưa nhập mã hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMAKH.Focus();
                 return;
             }
 
-            if (txtMAHD.Text.Trim().Length == 0)
+            if (txtMAKH.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Chưa nhập mã hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Chưa nhập mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMAKH.Focus();
                 return;
             }
@@ -96,6 +96,7 @@ namespace DoAn01
                 return;
             }
 
+            //Kiểm tra khách hàng có tồn tại không
             sql = "SELECT MAKH FROM KHACHHANG WHERE MAKH= N'" + txtMAKH.Text.Trim() + "'";
             if (!Functions.CheckValue(sql))
             {
@@ -113,14 +114,25 @@ namespace DoAn01
             System.Diagnostics.Debug.WriteLine(sql);
             Functions.RunSQL(sql);
             LoadDataGridView();
-            ResetValues();
+            
            
+            
             btnXoa.Enabled = true;
             btnThem.Enabled = true;
             btnSua.Enabled = true;
             btnBoQua.Enabled = false;
+            btnXemChiTiet.Enabled = true;
             btnLuu.Enabled = false;
+            btnLuu.Text = "&Lưu";
+            btnXemChiTiet.Enabled = true;
             txtMAHD.Enabled = false;
+            txtMAKH.Enabled = false;
+
+            FormHoaDon_Chitiet dlgChiTiet2 = new FormHoaDon_Chitiet();
+            dlgChiTiet2.mahd = txtMAHD.Text;
+            dlgChiTiet2.ShowDialog();
+            dlgChiTiet2.ThemHDtuFormHD();
+            ResetValues();
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -135,7 +147,7 @@ namespace DoAn01
                 MessageBox.Show("Chọn dòng muốn xoá trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (MessageBox.Show("Xác nhận xoá hóa đơn này!!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Xác nhận xoá hóa đơn này và chi tiết hoá đơn", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 sql = "DELETE HOADON WHERE MAHD=N'" + txtMAHD.Text + "'";
                 Functions.RunSqlDel(sql);
@@ -156,22 +168,17 @@ namespace DoAn01
                 MessageBox.Show("Chọn mã hóa đơn cần sửa thông tin trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-       
-            if (txtTongTien.Text == "")
+            
+            sql = "SELECT MAKH FROM KHACHHANG WHERE MAKH= N'" + txtMAKH.Text.Trim() + "'";
+            if (!Functions.CheckValue(sql))
             {
-                MessageBox.Show("Chưa nhập tổng tiền", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtTongTien.Focus();
-                return;
-            }
-
-            if (dtpNgayLap.Value == DateTime.Now)
-            {
-                MessageBox.Show("Chưa nhập ngày lập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                dtpNgayLap.Focus();
+                MessageBox.Show("Mã khách hàng này không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMAHD.Focus();
                 return;
             }
 
             sql = "UPDATE HOADON SET "
+                + "MAKH=N'" + txtMAKH.Text.Trim()+"', "
                 + "NGAYLAP='" + dtpNgayLap.Value.ToString("yyyy-MM-dd")
                 + "' WHERE MAHD=N'" + txtMAHD.Text + "';";
 
@@ -187,6 +194,8 @@ namespace DoAn01
             btnThem.Enabled = true;
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
+            btnXemChiTiet.Enabled = true;
+            btnLuu.Text = "&Lưu";
             btnLuu.Enabled = false;
             txtMAKH.Enabled = false;
         }
@@ -266,9 +275,10 @@ namespace DoAn01
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
             FormHoaDon_Chitiet dlgChiTiet = new FormHoaDon_Chitiet();
+            dlgChiTiet.mahd = txtMAHD.Text;
             dlgChiTiet.ShowDialog();
         }
     }

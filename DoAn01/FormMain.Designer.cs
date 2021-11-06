@@ -67,9 +67,9 @@ namespace DoAn01
             // btnKH
             // 
             this.btnKH.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnKH.Location = new System.Drawing.Point(7, 221);
+            this.btnKH.Location = new System.Drawing.Point(0, 221);
             this.btnKH.Name = "btnKH";
-            this.btnKH.Size = new System.Drawing.Size(193, 61);
+            this.btnKH.Size = new System.Drawing.Size(200, 61);
             this.btnKH.TabIndex = 1;
             this.btnKH.Text = "DANH SÁCH KHÁCH HÀNG";
             this.btnKH.UseVisualStyleBackColor = true;

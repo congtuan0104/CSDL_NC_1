@@ -69,9 +69,11 @@ namespace DoAn01
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(488, 24);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(458, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 17);
+            this.label1.Size = new System.Drawing.Size(246, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "CHI TIẾT HÓA ĐƠN";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -98,70 +100,79 @@ namespace DoAn01
             // 
             // textBox_CT_THANHTIEN
             // 
+            this.textBox_CT_THANHTIEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_CT_THANHTIEN.Location = new System.Drawing.Point(745, 124);
             this.textBox_CT_THANHTIEN.Name = "textBox_CT_THANHTIEN";
-            this.textBox_CT_THANHTIEN.Size = new System.Drawing.Size(222, 22);
+            this.textBox_CT_THANHTIEN.Size = new System.Drawing.Size(222, 30);
             this.textBox_CT_THANHTIEN.TabIndex = 11;
             // 
             // textBox_CT_GIAGIAM
             // 
+            this.textBox_CT_GIAGIAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_CT_GIAGIAM.Location = new System.Drawing.Point(745, 81);
             this.textBox_CT_GIAGIAM.Name = "textBox_CT_GIAGIAM";
-            this.textBox_CT_GIAGIAM.Size = new System.Drawing.Size(222, 22);
+            this.textBox_CT_GIAGIAM.Size = new System.Drawing.Size(222, 30);
             this.textBox_CT_GIAGIAM.TabIndex = 10;
             // 
             // textBox_CT_GIABAN
             // 
+            this.textBox_CT_GIABAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_CT_GIABAN.Location = new System.Drawing.Point(745, 32);
             this.textBox_CT_GIABAN.Name = "textBox_CT_GIABAN";
-            this.textBox_CT_GIABAN.Size = new System.Drawing.Size(222, 22);
+            this.textBox_CT_GIABAN.Size = new System.Drawing.Size(222, 30);
             this.textBox_CT_GIABAN.TabIndex = 9;
             // 
             // textBox_CT_SOLUONG
             // 
-            this.textBox_CT_SOLUONG.Location = new System.Drawing.Point(169, 118);
+            this.textBox_CT_SOLUONG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CT_SOLUONG.Location = new System.Drawing.Point(184, 125);
             this.textBox_CT_SOLUONG.Name = "textBox_CT_SOLUONG";
-            this.textBox_CT_SOLUONG.Size = new System.Drawing.Size(219, 22);
+            this.textBox_CT_SOLUONG.Size = new System.Drawing.Size(219, 30);
             this.textBox_CT_SOLUONG.TabIndex = 8;
             // 
             // textBox_CT_MASP
             // 
-            this.textBox_CT_MASP.Location = new System.Drawing.Point(169, 75);
+            this.textBox_CT_MASP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CT_MASP.Location = new System.Drawing.Point(184, 76);
             this.textBox_CT_MASP.Name = "textBox_CT_MASP";
-            this.textBox_CT_MASP.Size = new System.Drawing.Size(219, 22);
+            this.textBox_CT_MASP.Size = new System.Drawing.Size(219, 30);
             this.textBox_CT_MASP.TabIndex = 7;
             // 
             // textBox_CT_MAHD
             // 
-            this.textBox_CT_MAHD.Location = new System.Drawing.Point(169, 29);
+            this.textBox_CT_MAHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CT_MAHD.Location = new System.Drawing.Point(184, 29);
             this.textBox_CT_MAHD.Name = "textBox_CT_MAHD";
-            this.textBox_CT_MAHD.Size = new System.Drawing.Size(219, 22);
+            this.textBox_CT_MAHD.Size = new System.Drawing.Size(219, 30);
             this.textBox_CT_MAHD.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(601, 124);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 17);
+            this.label7.Size = new System.Drawing.Size(131, 25);
             this.label7.TabIndex = 5;
             this.label7.Text = "THÀNH TIỀN";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(601, 81);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 17);
+            this.label6.Size = new System.Drawing.Size(102, 25);
             this.label6.TabIndex = 4;
             this.label6.Text = "GIÁ GIẢM";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(601, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.Size = new System.Drawing.Size(92, 25);
             this.label5.TabIndex = 3;
             this.label5.Text = "GIÁ BÁN";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -169,27 +180,30 @@ namespace DoAn01
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(20, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 17);
+            this.label4.Size = new System.Drawing.Size(117, 25);
             this.label4.TabIndex = 2;
             this.label4.Text = "SỐ LƯỢNG";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(20, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 17);
+            this.label3.Size = new System.Drawing.Size(158, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "MÃ SẢN PHẨM ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 17);
+            this.label2.Size = new System.Drawing.Size(141, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "MÃ HÓA ĐƠN";
             // 
@@ -219,6 +233,7 @@ namespace DoAn01
             this.btnBoQua.Text = "&Huỷ bỏ";
             this.btnBoQua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBoQua.UseVisualStyleBackColor = true;
+            this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
             // btnLuu
             // 

@@ -22,21 +22,22 @@ namespace DoAn01
             InitializeComponent();
         }
 
+        public string mahd;
+
         private void FormHoaDon_Chitiet_Load(object sender, EventArgs e)
         {
             loadDataGidView_CTDH();
             btnLuu.Enabled = false;
-            btnThem.Enabled = true;
-            btnLuu.Enabled = false;
-            btnXoa.Enabled = false;
-            btnSua.Enabled = false;
             btnBoQua.Enabled = false;
+            textBox_CT_MAHD.Text = mahd;
+            textBox_CT_MAHD.Enabled = false;
+            
         }
 
 
         private void loadDataGidView_CTDH()
         {
-            string sql1 = "SELECT MAHD, MASP, SOLUONG, GIABAN, GIAGIAM, THANHTIEN FROM CT_HD";
+            string sql1 = "SELECT MAHD, MASP, SOLUONG, GIABAN, GIAGIAM, THANHTIEN FROM CT_HD WHERE MAHD='"+mahd+"'";
             table_CTHD = Class.Functions.GetDataToTable(sql1);
             dataGridview_CTHD.DataSource = table_CTHD;
             dataGridview_CTHD.Columns[0].HeaderText = "MÃ HÓA ĐƠN";
@@ -51,12 +52,19 @@ namespace DoAn01
             dataGridview_CTHD.Columns[3].Width = 125;
             dataGridview_CTHD.Columns[4].Width = 125;
             dataGridview_CTHD.Columns[5].Width = 125;
+            dataGridview_CTHD.AllowUserToAddRows = false; //Không cho người dùng thêm dữ liệu trực tiếp
+            dataGridview_CTHD.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-  
+            if (btnThem.Enabled == false)
+            {
+                MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox_CT_MASP.Focus();
+                return;
+            }
             if (table_CTHD.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -77,13 +85,11 @@ namespace DoAn01
 
         private void ResetValues()
         {
-            textBox_CT_MAHD.Text = "";
             textBox_CT_MASP.Text = "";
             textBox_CT_SOLUONG.Text = "";
             textBox_CT_GIABAN.Text = "";
             textBox_CT_GIAGIAM.Text = "";
             textBox_CT_THANHTIEN.Text = "";
-            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -104,8 +110,19 @@ namespace DoAn01
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
             ResetValues();
-            textBox_CT_MAHD.Enabled = true;
-            textBox_CT_MAHD.Focus();
+            textBox_CT_MASP.Focus();
+        }
+
+        public void ThemHDtuFormHD()
+        {
+            textBox_CT_MAHD.Text = mahd;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnBoQua.Enabled = true;
+            btnLuu.Enabled = true;
+            btnThem.Enabled = false;
+            ResetValues();
+            textBox_CT_MASP.Focus();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -119,7 +136,7 @@ namespace DoAn01
             }
             if (textBox_CT_MASP.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Chưa nhập max sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Chưa nhập mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox_CT_MASP.Focus();
                 return;
             }
@@ -135,8 +152,8 @@ namespace DoAn01
             sql = "SELECT MAHD FROM CT_HD WHERE MAHD='" + textBox_CT_MAHD.Text.Trim() + "'AND MASP='"+textBox_CT_MASP.Text.Trim()+"'";
             if (Functions.CheckValue(sql))
             {
-                MessageBox.Show("Chi tiết hóa đơn đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_CT_MAHD.Focus();
+                MessageBox.Show("Sản phẩm này đã tồn tại trong hoá đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox_CT_MASP.Focus();
                 return;
             }
             //Chèn thêm
@@ -149,7 +166,6 @@ namespace DoAn01
                 + ")";
             Functions.RunSQL(sql);
             loadDataGidView_CTDH();
-            //LoadDataGridView();
             ResetValues();
 
             btnXoa.Enabled = true;
@@ -157,8 +173,6 @@ namespace DoAn01
             btnSua.Enabled = true;
             btnBoQua.Enabled = false;
             btnLuu.Enabled = false;
-            textBox_CT_MAHD.Enabled = false;
-            textBox_CT_MASP.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -169,12 +183,12 @@ namespace DoAn01
                 MessageBox.Show("Không có dữ liệu để xoá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (textBox_CT_MAHD.Text.Trim() == "")
+            if (textBox_CT_MASP.Text.Trim() == "")
             {
-                MessageBox.Show("Chọn chi tiết hóa đơn muốn xoá trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Chọn sản phẩm muốn xoá trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (MessageBox.Show("Xác nhận xoá chi tiết đơn hàng này!!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Xác nhận xoá sản phẩm này khỏi hoá đơn!!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 sql = "DELETE CT_HD WHERE MAHD=N'" + textBox_CT_MAHD.Text + "' AND MASP=N'"+ textBox_CT_MASP.Text + "'";
                 Functions.RunSqlDel(sql);
@@ -192,7 +206,7 @@ namespace DoAn01
                 return;
             };
 
-            if (textBox_CT_MAHD.Text == "")
+            if (textBox_CT_MASP.Text == "")
             {
                 MessageBox.Show("Chọn chi tiết hóa đơn cần sửa thông tin trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -202,31 +216,18 @@ namespace DoAn01
 
             if (textBox_CT_MASP.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox_CT_MASP.Focus();
                 return;
             };
 
             if (textBox_CT_SOLUONG.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập số lượng sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa nhập số lượng sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox_CT_SOLUONG.Focus();
                 return;
             };
 
-            if (textBox_CT_GIABAN.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập giá bán của sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_CT_GIABAN.Focus();
-                return;
-            };
-
-            if (textBox_CT_GIAGIAM.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn phải nhập giá giảm của sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox_CT_GIAGIAM.Focus();
-                return;
-            };
 
             sql = "UPDATE CT_HD SET "
                 + "MASP = N'" + textBox_CT_MASP.Text.Trim() + "', "
@@ -239,7 +240,7 @@ namespace DoAn01
             Functions.RunSQL(sql);
             loadDataGidView_CTDH();
             ResetValues();
-            MessageBox.Show("Sửa thông tin chi tiết đơn hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Sửa thông tin thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnBoQua.Enabled = false;
 
         }
@@ -247,6 +248,16 @@ namespace DoAn01
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnBoQua_Click(object sender, EventArgs e)
+        {
+            ResetValues();
+            btnBoQua.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+            btnLuu.Enabled = false;
         }
     }
 }

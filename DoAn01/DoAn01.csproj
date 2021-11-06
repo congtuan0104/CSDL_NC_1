@@ -48,14 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="FormHoaDon_Chitiet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormHoaDon_Chitiet.Designer.cs">
       <DependentUpon>FormHoaDon_Chitiet.cs</DependentUpon>
     </Compile>
-
     <Compile Include="FormHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,7 +65,6 @@
     </Compile>
     <Compile Include="FormChart.Designer.cs">
       <DependentUpon>FormChart.cs</DependentUpon>
-
     </Compile>
     <Compile Include="FormKH.cs">
       <SubType>Form</SubType>
@@ -75,7 +72,6 @@
     <Compile Include="FormKH.Designer.cs">
       <DependentUpon>FormKH.cs</DependentUpon>
     </Compile>
-
     <Compile Include="FormTimKiemHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,27 +95,22 @@
     </Compile>
     <Compile Include="FormThongKe.Designer.cs">
       <DependentUpon>FormThongKe.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <EmbeddedResource Include="FormHoaDon_Chitiet.resx">
       <DependentUpon>FormHoaDon_Chitiet.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="FormHD.resx">
       <DependentUpon>FormHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChart.resx">
       <DependentUpon>FormChart.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="FormKH.resx">
       <DependentUpon>FormKH.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="FormTimKiemHoaDon.resx">
       <DependentUpon>FormTimKiemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,7 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,12 +153,16 @@
     <None Include="assets\icon\add-1-icon~1.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\Find.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Female.png" />
-
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icon\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icon\info~1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
