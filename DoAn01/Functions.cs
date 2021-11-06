@@ -12,12 +12,11 @@ namespace DoAn01.Class
 {
     class Functions
     {
-        public static SqlConnection Con;  //Khai báo đối tượng kết nối        
+        public static SqlConnection Con;  //Khai báo đối tượng kết nối
+                                          //
 
         public static void Connect()
         {
-
-           
             Con = new SqlConnection();   //Khởi tạo đối tượng
 
             Con.ConnectionString = DoAn01.Properties.Settings.Default.QLBHConnection;
@@ -32,6 +31,7 @@ namespace DoAn01.Class
                   {
                       Con = new SqlConnection(str1Con);
                   }
+
 
                   if (Con.State == ConnectionState.Closed)
                   {
@@ -52,6 +52,7 @@ namespace DoAn01.Class
                 Con.Close();   	//Đóng kết nối
                 Con.Dispose(); 	//Giải phóng tài nguyên
                 Con = null;
+                MessageBox.Show("Đã đóng kết nối");
             }
         }
 
