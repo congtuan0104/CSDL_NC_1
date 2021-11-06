@@ -16,7 +16,8 @@ namespace DoAn01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormHD());
+            Application.Run(new FormMain());
+
         }
     }
 }
