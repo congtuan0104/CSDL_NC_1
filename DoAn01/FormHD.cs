@@ -149,8 +149,11 @@ namespace DoAn01
             }
             if (MessageBox.Show("Xác nhận xoá hóa đơn này và chi tiết hoá đơn", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                sql = "DELETE CT_HD WHERE MAHD=N'" + txtMAHD.Text + "'";
+                Functions.RunSqlDel(sql);
                 sql = "DELETE HOADON WHERE MAHD=N'" + txtMAHD.Text + "'";
                 Functions.RunSqlDel(sql);
+                
                 LoadDataGridView();
                 ResetValues();
             }
